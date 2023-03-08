@@ -1,1 +1,4 @@
-
+# 2095022 # EMAD ABBASI
+# DATE READER/MODIFIER
+# TRYING TO UNDERSTAND COMMIT CHANGES, i'll write the full code here then figure that out later
+# initial commit change done, visible in history but still unsure on how to add a change
