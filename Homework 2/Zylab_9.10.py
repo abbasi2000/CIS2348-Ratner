@@ -3,7 +3,7 @@
 
 import csv  # it is a built in module
 file_name = input()
-with open(file_name, 'r') as input_file:  # will read file then iterate over values
+with open(file_name) as input_file:  # will read file then iterate over values
     reader = csv.reader(input_file)
 # creating dictionaries
     word_frequencies = {}

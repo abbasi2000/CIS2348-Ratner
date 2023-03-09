@@ -9,7 +9,6 @@ password = password.replace('B', '8')
 password = password.replace('o', '.')
 # appending
 password += 'q*s'
-password = password.capitalize()
 
 print(password)
 

@@ -3,7 +3,7 @@
 # Bob, race car, malayalam
 
 def is_palindrome(s):
-    s = s.replace('', '')  # removing spaces
+    s = s.replace(' ', '')  # removing spaces
     s = s.lower()  # lower casing like we upper cased in previous lab
 
     return s == s[::-1]  # this steps checks if the reverse equals the original string

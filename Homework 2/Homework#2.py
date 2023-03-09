@@ -4,7 +4,7 @@
 # initial commit change done, visible in history but still unsure on how to add a change
 from datetime import datetime
 
-with open('inputDates.txt', 'r') as f:
+with open('inputDates.txt') as f:
     for line in f:
         date_str = line.strip()
         if date_str == "-1":

@@ -1,0 +1,176 @@
+Index: Homework 2/Zylab_7.25.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Homework 2/Zylab_7.25.py	(revision 8e7872dd13b2578f76fbe2621a7aaa89554aeebf)
++++ Homework 2/Zylab_7.25.py	(date 1678295111968)
+@@ -1,1 +1,60 @@
++# 2095022 # EMAD ABBASI
++# QUARTERS, NICKLES, DIMES AND PENNIES
++
++def exact_change(user_total):
++    num_dollars = user_total // 100
++    user_total %= 100
++# remainder from 100 gives us dollars
++    num_quarters = user_total // 25
++    user_total %= 25
++# remainder from 25 from that 100 gives us quarters
++    num_dimes = user_total // 10
++    user_total %= 10
++# and so on and so forth
++    num_nickels = user_total // 5
++    user_total %= 5
++
++    num_pennies = user_total
++
++    return num_dollars, num_quarters, num_dimes, num_nickels, num_pennies
++
++
++if __name__ == '__main__':
++    input_val = int(input())
++
++    if input_val <= 0:
++        print('no change')
++    else:
++        num_dollars, num_quarters, num_dimes, num_nickles, num_pennies = exact_change(input_val)
++
++        if num_dollars > 0:
++            if num_dollars == 1:
++                print('1 dollar')
++            else:
++                print(num_dollars, 'dollars')
++
++        if num_quarters > 0:
++            if num_quarters == 1:
++                print('1 quarter')
++            else:
++                print(num_quarters, 'quarters')
++# implementing singular/plural in case we get just one dime instead of many dimes
++        if num_dimes > 0:
++            if num_dimes == 1:
++                print('1 dime')
++            else:
++                print(num_dimes, 'dimes')
++
++        if num_nickles > 0:
++            if num_nickles == 1:
++                print('1 nickel')
++            else:
++                print(num_nickles, 'nickles')
++
++        if num_pennies > 0:
++            if num_pennies == 1:
++                print('1 penny')
++            else:
++                print(num_pennies, 'pennies')
++
+ 
+Index: Homework 2/Zylab_8.10.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Homework 2/Zylab_8.10.py	(revision 8e7872dd13b2578f76fbe2621a7aaa89554aeebf)
++++ Homework 2/Zylab_8.10.py	(date 1678295957935)
+@@ -1,1 +1,18 @@
++# 2095022 # EMAD ABBASI
++# checking for palindromes
++# Bob, race car, malayalam
++
++def is_palindrome(s):
++    s = s.replace('', '')  # removing spaces
++    s = s.lower()  # lower casing like we upper cased in previous lab
++
++    return s == s[::-1]  # this steps checks if the reverse equals the original string
++
+ 
++if __name__ == '__main__':
++    s = input()
++
++    if is_palindrome(s):
++        print(s, 'is a palindrome')
++    else:
++        print(s, 'is not a palindrome')
+Index: Homework 2/Zylab_6.22.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Homework 2/Zylab_6.22.py	(revision 8e7872dd13b2578f76fbe2621a7aaa89554aeebf)
++++ Homework 2/Zylab_6.22.py	(date 1678293230022)
+@@ -1,1 +1,20 @@
++# EMAD ABBASI # 2095022
++# EQUATION SOLVER USING BRUTE FORCE
++
++# input
++a1 = int(input())
++b1 = int(input())
++c1 = int(input())
++a2 = int(input())
++b2 = int(input())
++c2 = int(input())
++
++# looping
++for x in range(-10, 11):
++    for y in range(-10, 11):
++        #checking via equation
++        if a1*x + b1*y == c1 and a2*x + b2*y == c2:
++            print(x,y)
++            quit()
+ 
++print("No solution")
+\ No newline at end of file
+Index: Homework 2/Homework#2.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Homework 2/Homework#2.py	(revision 8e7872dd13b2578f76fbe2621a7aaa89554aeebf)
++++ Homework 2/Homework#2.py	(date 1678299580966)
+@@ -1,1 +1,4 @@
+-
++# 2095022 # EMAD ABBASI
++# DATE READER/MODIFIER
++# TRYING TO UNDERSTAND COMMIT CHANGES, i'll write the full code here then figure that out later
++# initial commit change done, visible in history but still unsure on how to add a change
+Index: Homework 2/Zylab_9.10.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Homework 2/Zylab_9.10.py	(revision 8e7872dd13b2578f76fbe2621a7aaa89554aeebf)
++++ Homework 2/Zylab_9.10.py	(date 1678297357936)
+@@ -1,1 +1,22 @@
++# 2095022 # EMAD ABBASI
++# WORD FREQUENCIES (LISTS)
++
++import csv  # it is a built in module
++file_name = input()
++with open(file_name, 'r') as input_file:  # will read file then iterate over values
++    reader = csv.reader(input_file)
++# creating dictionaries
++    word_frequencies = {}
++# iterating code
++    for row in reader:  # goes over rows
++        for word in row: # goes over words
++            word = word.lower().strip()  # lower cases and gets rid of unnecessary spaces
++
++            if word not in word_frequencies:
++                word_frequencies[word] = 1
++            else:
++                word_frequencies[word] += 1
++
++    for word, frequencies in word_frequencies.items():
++        print(word, frequencies)
+ 
