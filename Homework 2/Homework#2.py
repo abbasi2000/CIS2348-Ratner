@@ -9,3 +9,6 @@ with open('inputDates.txt') as f:
         date_str = line.strip()
         if date_str == "-1":
             break
+    try:
+            date = datetime.strptime(date_str, '%B %d, %Y')
+            if date <= datetime.now():
