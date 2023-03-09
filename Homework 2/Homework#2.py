@@ -27,3 +27,17 @@ while True:
                 print(date.strftime('%-m/%-d/%Y'))
         except ValueError:
             pass
+
+    # Part B
+
+    with open('inputDates.txt', 'r') as input_file:
+        input_lines = input_file.readlines()
+
+    for date_str in input_lines:
+        try:
+            date_obj = datetime.strptime(date_str.strip(), '%B %d, %Y')
+            current_date = datetime.now()
+            if date_obj <= current_date:
+                print(date_obj.strftime('%-m/%-d/%Y'))
+        except ValueError:
+            pass

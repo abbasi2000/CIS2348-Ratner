@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b259fde0-904c-40fb-9831-87b5befb1829" name="Default Changelist" comment="Fixing Errors in Input">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework 2/Homework#2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Homework 2/Homework#2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +53,7 @@
       <recent name="C:\Users\emada\PycharmProjects\CIS2348-Ratner\Homework" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Zylab_9.10">
+  <component name="RunManager" selected="Python.Homework#2">
     <configuration name="Homework#2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CIS2348-Ratner" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,8 +166,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Zylab_9.10" />
         <item itemvalue="Python.Homework#2" />
+        <item itemvalue="Python.Zylab_9.10" />
         <item itemvalue="Python.Zylab_8.10" />
         <item itemvalue="Python.Zylab_7.25" />
         <item itemvalue="Python.Zylab_6.22" />
@@ -194,7 +193,7 @@
       <workItem from="1678288959565" duration="513000" />
       <workItem from="1678289479927" duration="7965000" />
       <workItem from="1678322113560" duration="4521000" />
-      <workItem from="1678328103147" duration="4171000" />
+      <workItem from="1678328103147" duration="4713000" />
     </task>
     <task id="LOCAL-00001" summary="Updated for submission">
       <created>1676503126668</created>
@@ -259,7 +258,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678336940884</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fixing Errors in Input">
+      <created>1678337628835</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678337628835</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fixing Errors in Input">
+      <created>1678337808625</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1678337808625</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,22 +336,22 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="129" y="53" key="MergeDialog/0.0.1366.720@0.0.1366.720" timestamp="1678337120428" />
-    <state x="275" y="92" key="Vcs.Push.Dialog.v2" timestamp="1678337168207">
+    <state x="275" y="92" key="Vcs.Push.Dialog.v2" timestamp="1678337813702">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="275" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.720@0.0.1366.720" timestamp="1678337168207" />
-    <state x="500" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1678337622036">
+    <state x="275" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.720@0.0.1366.720" timestamp="1678337813702" />
+    <state x="500" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1678338164351">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="500" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.720@0.0.1366.720" timestamp="1678337622036" />
+    <state x="500" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.720@0.0.1366.720" timestamp="1678338164351" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylabs_1_12.coverage" NAME="Zylabs_1.12 Coverage Results" MODIFIED="1676471451555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework" />
     <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylab_6_22.coverage" NAME="Zylab_6.22 Coverage Results" MODIFIED="1678293230022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework 2" />
     <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylabs_1_20.coverage" NAME="Zylabs_1.20 Coverage Results" MODIFIED="1676472568795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework" />
     <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylabs_5_22.coverage" NAME="Zylabs_5.22 Coverage Results" MODIFIED="1678292433406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework" />
-    <SUITE FILE_PATH="coverage/CIS2348_Ratner$Homework_2.coverage" NAME="Homework#2 Coverage Results" MODIFIED="1678327708258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework 2" />
     <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylab_9_10.coverage" NAME="Zylab_9.10 Coverage Results" MODIFIED="1678327771129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework 2" />
+    <SUITE FILE_PATH="coverage/CIS2348_Ratner$Homework_2.coverage" NAME="Homework#2 Coverage Results" MODIFIED="1678338048435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework 2" />
     <SUITE FILE_PATH="coverage/CIS2348_Ratner$Homework1.coverage" NAME="Homework1 Coverage Results" MODIFIED="1676476748210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework" />
     <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylabs_2_20.coverage" NAME="Zylabs_2.20 Coverage Results" MODIFIED="1676482814063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework" />
     <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylab_6_17.coverage" NAME="Zylab_6.17 Coverage Results" MODIFIED="1678292457397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework 2" />
