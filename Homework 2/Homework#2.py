@@ -28,7 +28,9 @@ while True:
         except ValueError:
             pass
 
-    # Part B
+    # Part B After the program is working as above, modify the program so that it
+    # reads all dates from an input file “inputDates.txt” (an Example file is
+    # attached).
 
     with open('inputDates.txt', 'r') as input_file:
         input_lines = input_file.readlines()
@@ -41,3 +43,19 @@ while True:
                 print(date_obj.strftime('%-m/%-d/%Y'))
         except ValueError:
             pass
+
+    # Part C Modify your program further so that after parsing all dates from the
+    # input file “inputDates.txt”, it writes out the correct ones into an
+    # output file called: “parsedDates.txt”.
+
+    with open('inputDates.txt', 'r') as input_file, open('parsedDates.txt', 'w') as output_file:
+        input_lines = input_file.readlines()
+
+        for date_string in input_lines:
+            try:
+                date_obj = datetime.strptime(date_string.strip(), '%B %d, %Y')
+                current_date = datetime.now()
+                if date_obj <= current_date:
+                    output_file.write(date_obj.strftime('%-m/%-d/%Y') + '\n')
+            except ValueError:
+                pass
