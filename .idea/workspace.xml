@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b259fde0-904c-40fb-9831-87b5befb1829" name="Default Changelist" comment="Fixing Errors in Input">
-      <change beforePath="$PROJECT_DIR$/Homework 3/Zylabs_10.11.py" beforeDir="false" afterPath="$PROJECT_DIR$/Homework 3/Zylabs_10.11.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homework 3/Zylabs_10.15.py" beforeDir="false" afterPath="$PROJECT_DIR$/Homework 3/Zylabs_10.15.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework 3/Zylabs_10.19.py" beforeDir="false" afterPath="$PROJECT_DIR$/Homework 3/Zylabs_10.19.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +55,7 @@
       <recent name="C:\Users\emada\PycharmProjects\CIS2348-Ratner\Homework" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Zylabs_10.15">
+  <component name="RunManager" selected="Python.Zylabs_10.19">
     <configuration name="Homework#2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CIS2348-Ratner" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -70,28 +70,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Homework 2/Homework#2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Zylab_8.10" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CIS2348-Ratner" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Homework 2" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Homework 2/Zylab_8.10.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -166,13 +144,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Zylabs_10.19" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CIS2348-Ratner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Homework 3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Homework 3/Zylabs_10.19.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Zylabs_10.19" />
         <item itemvalue="Python.Zylabs_10.15" />
         <item itemvalue="Python.Zylabs_10.11" />
         <item itemvalue="Python.Homework#2" />
         <item itemvalue="Python.Zylab_9.10" />
-        <item itemvalue="Python.Zylab_8.10" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +196,7 @@
       <workItem from="1678289479927" duration="7965000" />
       <workItem from="1678322113560" duration="4521000" />
       <workItem from="1678328103147" duration="7587000" />
-      <workItem from="1680745265928" duration="2255000" />
+      <workItem from="1680745265928" duration="3580000" />
     </task>
     <task id="LOCAL-00001" summary="Updated for submission">
       <created>1676503126668</created>
@@ -310,7 +310,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680747310679</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Fixing Errors in Input">
+      <created>1680747544700</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1680747544700</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fixing Errors in Input">
+      <created>1680747821980</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1680747821980</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,22 +352,22 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="463" y="101" key="FileChooserDialogImpl/0.0.1366.720@0.0.1366.720" timestamp="1678328099131" />
-    <state width="1323" height="177" key="GridCell.Tab.0.bottom" timestamp="1680747440137">
+    <state width="1323" height="177" key="GridCell.Tab.0.bottom" timestamp="1680750383348">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state width="1323" height="177" key="GridCell.Tab.0.bottom/0.0.1366.720@0.0.1366.720" timestamp="1680747440137" />
-    <state width="1323" height="177" key="GridCell.Tab.0.center" timestamp="1680747440137">
+    <state width="1323" height="177" key="GridCell.Tab.0.bottom/0.0.1366.720@0.0.1366.720" timestamp="1680750383348" />
+    <state width="1323" height="177" key="GridCell.Tab.0.center" timestamp="1680750383348">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state width="1323" height="177" key="GridCell.Tab.0.center/0.0.1366.720@0.0.1366.720" timestamp="1680747440137" />
-    <state width="1323" height="177" key="GridCell.Tab.0.left" timestamp="1680747440137">
+    <state width="1323" height="177" key="GridCell.Tab.0.center/0.0.1366.720@0.0.1366.720" timestamp="1680750383348" />
+    <state width="1323" height="177" key="GridCell.Tab.0.left" timestamp="1680750383348">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state width="1323" height="177" key="GridCell.Tab.0.left/0.0.1366.720@0.0.1366.720" timestamp="1680747440137" />
-    <state width="1323" height="177" key="GridCell.Tab.0.right" timestamp="1680747440137">
+    <state width="1323" height="177" key="GridCell.Tab.0.left/0.0.1366.720@0.0.1366.720" timestamp="1680750383348" />
+    <state width="1323" height="177" key="GridCell.Tab.0.right" timestamp="1680750383348">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state width="1323" height="177" key="GridCell.Tab.0.right/0.0.1366.720@0.0.1366.720" timestamp="1680747440137" />
+    <state width="1323" height="177" key="GridCell.Tab.0.right/0.0.1366.720@0.0.1366.720" timestamp="1680750383348" />
     <state width="1323" height="220" key="GridCell.Tab.1.bottom" timestamp="1676489319865">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
@@ -374,20 +388,21 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="129" y="53" key="MergeDialog/0.0.1366.720@0.0.1366.720" timestamp="1678337120428" />
-    <state x="275" y="92" key="Vcs.Push.Dialog.v2" timestamp="1680747313926">
+    <state x="275" y="92" key="Vcs.Push.Dialog.v2" timestamp="1680747825636">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="275" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.720@0.0.1366.720" timestamp="1680747313926" />
-    <state x="500" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1680747539295">
+    <state x="275" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.720@0.0.1366.720" timestamp="1680747825636" />
+    <state x="500" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1680747816425">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="500" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.720@0.0.1366.720" timestamp="1680747539295" />
+    <state x="500" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.720@0.0.1366.720" timestamp="1680747816425" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylabs_1_12.coverage" NAME="Zylabs_1.12 Coverage Results" MODIFIED="1676471451555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework" />
     <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylabs_10_15.coverage" NAME="Zylabs_10.15 Coverage Results" MODIFIED="1680747201266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework 3" />
     <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylab_9_10.coverage" NAME="Zylab_9.10 Coverage Results" MODIFIED="1678327771129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework 2" />
     <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylab_6_17.coverage" NAME="Zylab_6.17 Coverage Results" MODIFIED="1678292457397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework 2" />
+    <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylabs_10_19.coverage" NAME="Zylabs_10.19 Coverage Results" MODIFIED="1680750118295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework 3" />
     <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylab_8_10.coverage" NAME="Zylab_8.10 Coverage Results" MODIFIED="1678326176349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework 2" />
     <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylabs_10_11.coverage" NAME="Zylabs_10.11 Coverage Results" MODIFIED="1680746883515" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework 3" />
     <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylab_6_22.coverage" NAME="Zylab_6.22 Coverage Results" MODIFIED="1678293230022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework 2" />
