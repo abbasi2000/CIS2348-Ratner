@@ -20,15 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b259fde0-904c-40fb-9831-87b5befb1829" name="Default Changelist" comment="Fixing Errors in Input">
-      <change afterPath="$PROJECT_DIR$/pythonProject/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pythonProject/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pythonProject/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pythonProject/.idea/pythonProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pythonProject/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_8_2023_12_25_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_8_2023_12_25_PM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework 3/Zylabs_10.11.py" beforeDir="false" afterPath="$PROJECT_DIR$/Homework 3/Zylabs_10.11.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework 3/Zylabs_10.15.py" beforeDir="false" afterPath="$PROJECT_DIR$/Homework 3/Zylabs_10.15.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +196,7 @@
       <workItem from="1678289479927" duration="7965000" />
       <workItem from="1678322113560" duration="4521000" />
       <workItem from="1678328103147" duration="7587000" />
-      <workItem from="1680745265928" duration="1749000" />
+      <workItem from="1680745265928" duration="2255000" />
     </task>
     <task id="LOCAL-00001" summary="Updated for submission">
       <created>1676503126668</created>
@@ -303,7 +296,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678338628081</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Fixing Errors in Input">
+      <created>1680747034664</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1680747034664</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Fixing Errors in Input">
+      <created>1680747310679</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1680747310679</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,22 +338,22 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="463" y="101" key="FileChooserDialogImpl/0.0.1366.720@0.0.1366.720" timestamp="1678328099131" />
-    <state width="1323" height="177" key="GridCell.Tab.0.bottom" timestamp="1680746883521">
+    <state width="1323" height="177" key="GridCell.Tab.0.bottom" timestamp="1680747440137">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state width="1323" height="177" key="GridCell.Tab.0.bottom/0.0.1366.720@0.0.1366.720" timestamp="1680746883521" />
-    <state width="1323" height="177" key="GridCell.Tab.0.center" timestamp="1680746883521">
+    <state width="1323" height="177" key="GridCell.Tab.0.bottom/0.0.1366.720@0.0.1366.720" timestamp="1680747440137" />
+    <state width="1323" height="177" key="GridCell.Tab.0.center" timestamp="1680747440137">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state width="1323" height="177" key="GridCell.Tab.0.center/0.0.1366.720@0.0.1366.720" timestamp="1680746883521" />
-    <state width="1323" height="177" key="GridCell.Tab.0.left" timestamp="1680746883521">
+    <state width="1323" height="177" key="GridCell.Tab.0.center/0.0.1366.720@0.0.1366.720" timestamp="1680747440137" />
+    <state width="1323" height="177" key="GridCell.Tab.0.left" timestamp="1680747440137">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state width="1323" height="177" key="GridCell.Tab.0.left/0.0.1366.720@0.0.1366.720" timestamp="1680746883521" />
-    <state width="1323" height="177" key="GridCell.Tab.0.right" timestamp="1680746883521">
+    <state width="1323" height="177" key="GridCell.Tab.0.left/0.0.1366.720@0.0.1366.720" timestamp="1680747440137" />
+    <state width="1323" height="177" key="GridCell.Tab.0.right" timestamp="1680747440137">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state width="1323" height="177" key="GridCell.Tab.0.right/0.0.1366.720@0.0.1366.720" timestamp="1680746883521" />
+    <state width="1323" height="177" key="GridCell.Tab.0.right/0.0.1366.720@0.0.1366.720" timestamp="1680747440137" />
     <state width="1323" height="220" key="GridCell.Tab.1.bottom" timestamp="1676489319865">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
@@ -367,17 +374,18 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="129" y="53" key="MergeDialog/0.0.1366.720@0.0.1366.720" timestamp="1678337120428" />
-    <state x="275" y="92" key="Vcs.Push.Dialog.v2" timestamp="1678338634134">
+    <state x="275" y="92" key="Vcs.Push.Dialog.v2" timestamp="1680747313926">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="275" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.720@0.0.1366.720" timestamp="1678338634134" />
-    <state x="500" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1680746907427">
+    <state x="275" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.720@0.0.1366.720" timestamp="1680747313926" />
+    <state x="500" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1680747539295">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="500" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.720@0.0.1366.720" timestamp="1680746907427" />
+    <state x="500" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.720@0.0.1366.720" timestamp="1680747539295" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylabs_1_12.coverage" NAME="Zylabs_1.12 Coverage Results" MODIFIED="1676471451555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework" />
+    <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylabs_10_15.coverage" NAME="Zylabs_10.15 Coverage Results" MODIFIED="1680747201266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework 3" />
     <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylab_9_10.coverage" NAME="Zylab_9.10 Coverage Results" MODIFIED="1678327771129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework 2" />
     <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylab_6_17.coverage" NAME="Zylab_6.17 Coverage Results" MODIFIED="1678292457397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework 2" />
     <SUITE FILE_PATH="coverage/CIS2348_Ratner$Zylab_8_10.coverage" NAME="Zylab_8.10 Coverage Results" MODIFIED="1678326176349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Homework 2" />

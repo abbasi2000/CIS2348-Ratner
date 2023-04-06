@@ -21,7 +21,3 @@ def main():
         print(f"Congratulations, Team {team_name} has a winning average!")
     else:
         print(f"Team {team_name} has a losing average.")
-
-
-if __name__ == "__main__":
-    main()

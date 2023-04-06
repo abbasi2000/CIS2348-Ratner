@@ -33,7 +33,3 @@ def main():
 
     user_food_item.print_info()
     print('Number of calories for {:.2f} serving(s): {:.2f}'.format(num_serv, user_food_item.get_calories(num_serv)))
-
-
-if __name__ == "__main__":
-    main()
