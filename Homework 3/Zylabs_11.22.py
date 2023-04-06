@@ -1,14 +1,12 @@
 # 2095022
 # EMAD ABBASI
-# Get input from the user
 input_str = input()
 
-# Convert the input string to a list of words
+# Convert input string to a list of words
 input_list = input_str.split()
 
-# Initialize an empty dictionary to store word frequencies
+# Initialize empty dictionary to store word frequencies
 word_frequencies = {}
-
 # Iterate through the input list and update the word frequencies
 for word in input_list:
     if word not in word_frequencies:
