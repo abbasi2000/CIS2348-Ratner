@@ -1,0 +1,21 @@
+Index: Homework 2/Homework#2.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># 2095022 # EMAD ABBASI\r\n# DATE READER/MODIFIER\r\n# TRYING TO UNDERSTAND COMMIT CHANGES, i'll write the full code here then figure that out later\r\n# initial commit change done, visible in history but still unsure on how to add a change\r\nfrom datetime import datetime\r\n\r\nwith open('inputDates.txt', 'r') as f:\r\n    for line in f:\r\n        date_str = line.strip()\r\n        if date_str == \"-1\":\r\n            break\r\n        try:\r\n            date = datetime.strptime(date_str, '%B %d, %Y')\r\n            if date <= datetime.now():\r\n                print(date.strftime('%-m/%-d/%Y'))\r\n        except ValueError:\r\n            pass
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Homework 2/Homework#2.py	(revision 2909915e2e8db65e95c4b3b4c2524c7c5d5190aa)
++++ Homework 2/Homework#2.py	(date 1678337090295)
+@@ -9,9 +9,5 @@
+         date_str = line.strip()
+         if date_str == "-1":
+             break
+-        try:
++ try:
+             date = datetime.strptime(date_str, '%B %d, %Y')
+-            if date <= datetime.now():
+-                print(date.strftime('%-m/%-d/%Y'))
+-        except ValueError:
+-            pass
+\ No newline at end of file
