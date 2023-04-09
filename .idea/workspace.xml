@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b259fde0-904c-40fb-9831-87b5befb1829" name="Default Changelist" comment="Fixing Errors in Input" />
+    <list default="true" id="b259fde0-904c-40fb-9831-87b5befb1829" name="Default Changelist" comment="Fixing Errors in Input">
+      <change beforePath="$PROJECT_DIR$/FinalProjectPart1/phoneInventory.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalProjectPart1/towerInventory.csv" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -196,7 +199,7 @@
       <workItem from="1680745265928" duration="5600000" />
       <workItem from="1680756201848" duration="103000" />
       <workItem from="1680756520927" duration="109000" />
-      <workItem from="1681076283680" duration="4767000" />
+      <workItem from="1681076283680" duration="5085000" />
     </task>
     <task id="LOCAL-00001" summary="Updated for submission">
       <created>1676503126668</created>
@@ -352,7 +355,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681080950017</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Fixing Errors in Input">
+      <created>1681081105267</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1681081105267</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,10 +430,10 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="129" y="53" key="MergeDialog/0.0.1366.720@0.0.1366.720" timestamp="1678337120428" />
-    <state x="275" y="92" key="Vcs.Push.Dialog.v2" timestamp="1681081093633">
+    <state x="275" y="92" key="Vcs.Push.Dialog.v2" timestamp="1681081387016">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
-    <state x="275" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.720@0.0.1366.720" timestamp="1681081093633" />
+    <state x="275" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.720@0.0.1366.720" timestamp="1681081387016" />
     <state x="500" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1681080944832">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
