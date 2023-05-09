@@ -44,9 +44,13 @@ for row in service_dates_list:
     if item_id in item_dict:
         item_dict[item_id].update_service_date(service_date)
 
-def find_best_item(manufacturer, item_type):
+def find_best_item(manufacturer, item_type, include_damaged=False):
     items = [item for item in item_dict.values() if item.manufacturer.lower() == manufacturer.lower() and item.item_type.lower() == item_type.lower()]
-    valid_items = [item for item in items if not item.damaged and item.service_date > datetime.now()]
+    
+    if include_damaged:
+        valid_items = [item for item in items if item.service_date > datetime.now()]
+    else:
+        valid_items = [item for item in items if not item.damaged and item.service_date > datetime.now()]
     
     max_price = -1
     best_item = None
@@ -55,6 +59,7 @@ def find_best_item(manufacturer, item_type):
             max_price = item.price
             best_item = item
     return best_item
+
 
 def find_alternative_item(item):
     alternative_items = [i for i in item_dict.values() if i.item_type.lower() == item.item_type.lower() and i.manufacturer.lower() != item.manufacturer.lower() and not i.damaged and i.service_date > datetime.now()]
@@ -69,12 +74,18 @@ def find_alternative_item(item):
     return alternative_item
 
 while True:
-    query = input("Enter the manufacturer and item type or 'q' to quit: ")
+    query = input("Enter the manufacturer, item type, and (optionally) 'damaged' or 'q' to quit: ")
     if query.lower() == 'q':
         break
 
-    manufacturer, item_type, *_ = query.split()
-    best_item = find_best_item(manufacturer, item_type)
+    query_parts = [part.strip() for part in query.split() if part.strip()]
+    if len(query_parts) >= 2:
+        manufacturer, item_type, *extra = query_parts
+        include_damaged = 'damaged' in extra
+    else:
+        continue
+
+    best_item = find_best_item(manufacturer, item_type, include_damaged=include_damaged)
     if best_item is None:
         print("No such item in inventory")
     else:
@@ -82,5 +93,6 @@ while True:
         alternative_item = find_alternative_item(best_item)
         if alternative_item is not None:
             print(f"You may, also, consider: {alternative_item.item_id}, {alternative_item.manufacturer}, {alternative_item.item_type}, ${alternative_item.price}")
+
 
 
