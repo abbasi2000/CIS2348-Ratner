@@ -73,26 +73,26 @@ def find_alternative_item(item):
             alternative_item = i
     return alternative_item
 
+
 while True:
-    query = input("Enter the manufacturer, item type, and (optionally) 'damaged' or 'q' to quit: ")
+    query = input("Enter the manufacturer and item type or 'q' to quit: ")
     if query.lower() == 'q':
         break
 
-    query_parts = [part.strip() for part in query.split() if part.strip()]
-    if len(query_parts) >= 2:
-        manufacturer, item_type, *extra = query_parts
-        include_damaged = 'damaged' in extra
-    else:
-        continue
-
-    best_item = find_best_item(manufacturer, item_type, include_damaged=include_damaged)
+    manufacturer, item_type, *_ = query.split()
+    best_item = find_best_item(manufacturer, item_type)
     if best_item is None:
         print("No such item in inventory")
     else:
         print(f"Your item is: {best_item.item_id}, {best_item.manufacturer}, {best_item.item_type}, ${best_item.price}")
         alternative_item = find_alternative_item(best_item)
         if alternative_item is not None:
-            print(f"You may, also, consider: {alternative_item.item_id}, {alternative_item.manufacturer}, {alternative_item.item_type}, ${alternative_item.price}")
+            print(f"You may, also, consider: "
+                  f"{alternative_item.item_id}, "
+                  f"{alternative_item.manufacturer}, "
+                  f"{alternative_item.item_type}, "
+                  f"${alternative_item.price}")
+
 
 
 
