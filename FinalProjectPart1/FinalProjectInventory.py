@@ -1,6 +1,6 @@
 # 2095022
 # EMAD ABBASI
-# THIS IS PART 1 OF THE PROJECT WHERE WE GENERATE INVENTORY RELATED CODE FOR THE FIRST PART
+# THIS IS PART 2 OF THE PROJECT WHERE WE GENERATE INVENTORY RELATED CODE FOR THE FIRST PART
 import csv
 from datetime import datetime
 
@@ -47,11 +47,26 @@ for row in service_dates_list:
 def find_best_item(manufacturer, item_type):
     items = [item for item in item_dict.values() if item.manufacturer.lower() == manufacturer.lower() and item.item_type.lower() == item_type.lower()]
     valid_items = [item for item in items if not item.damaged and item.service_date > datetime.now()]
-    return max(valid_items, key=lambda item: item.price, default=None)
+    
+    max_price = -1
+    best_item = None
+    for item in valid_items:
+        if item.price > max_price:
+            max_price = item.price
+            best_item = item
+    return best_item
 
 def find_alternative_item(item):
     alternative_items = [i for i in item_dict.values() if i.item_type.lower() == item.item_type.lower() and i.manufacturer.lower() != item.manufacturer.lower() and not i.damaged and i.service_date > datetime.now()]
-    return min(alternative_items, key=lambda i: abs(i.price - item.price), default=None)
+    
+    min_price_diff = float('inf')
+    alternative_item = None
+    for i in alternative_items:
+        price_diff = abs(i.price - item.price)
+        if price_diff < min_price_diff:
+            min_price_diff = price_diff
+            alternative_item = i
+    return alternative_item
 
 while True:
     query = input("Enter the manufacturer and item type or 'q' to quit: ")
@@ -67,4 +82,5 @@ while True:
         alternative_item = find_alternative_item(best_item)
         if alternative_item is not None:
             print(f"You may, also, consider: {alternative_item.item_id}, {alternative_item.manufacturer}, {alternative_item.item_type}, ${alternative_item.price}")
+
 
