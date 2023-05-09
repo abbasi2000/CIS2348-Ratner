@@ -4,113 +4,67 @@
 import csv
 from datetime import datetime
 
+class InventoryItem:
+    def __init__(self, item_id, manufacturer, item_type, price, service_date, damaged):
+        self.item_id = item_id
+        self.manufacturer = manufacturer
+        self.item_type = item_type
+        self.price = price
+        self.service_date = service_date
+        self.damaged = damaged
+
+    @classmethod
+    def from_manufacturer_list_row(cls, row):
+        item_id, manufacturer, item_type, *damaged = row
+        return cls(item_id, manufacturer, item_type, None, None, bool(damaged and damaged[0].lower() == 'damaged'))
+
+    def update_price(self, price):
+        self.price = float(price)
+
+    def update_service_date(self, service_date):
+        self.service_date = datetime.strptime(service_date, '%m/%d/%Y')
 
 def read_csv(file_name):
     with open(file_name, newline='', encoding='utf-8') as f:
         return list(csv.reader(f))
 
-
-def sort_by_manufacturer(items):
-    return items[1]['manufacturer']
-
-
-def sort_by_item_id(items):
-    return items[0]
-
-
-def sort_by_service_date(items):
-    return items[1]['service_date']
-
-
-def sort_by_price_desc(items):
-    return -items[1]['price']
-
-
 manufacturer_list = read_csv('ManufacturerList.csv')
 price_list = read_csv('PriceList.csv')
 service_dates_list = read_csv('ServiceDatesList.csv')
 
-item_dict = {}
-
-for row in manufacturer_list:
-    item_id, manufacturer, item_type, *damaged = row
-    item_dict[item_id] = {
-        'manufacturer': manufacturer,
-        'item_type': item_type,
-        'damaged': bool(damaged and damaged[0].lower() == 'damaged')
-    }
+item_dict = {row[0]: InventoryItem.from_manufacturer_list_row(row) for row in manufacturer_list}
 
 for row in price_list:
     item_id, price = row
     if item_id in item_dict:
-        item_dict[item_id]['price'] = float(price)
+        item_dict[item_id].update_price(price)
 
 for row in service_dates_list:
     item_id, service_date = row
     if item_id in item_dict:
-        item_dict[item_id]['service_date'] = datetime.strptime(service_date, '%m/%d/%Y')
+        item_dict[item_id].update_service_date(service_date)
 
-# FullInventory.csv
-with open('FullInventory.csv', 'w', newline='', encoding='utf-8') as f:
-    writer = csv.writer(f)
-    header = ['item_id', 'manufacturer', 'item_type', 'price', 'service_date', 'damaged']
-    writer.writerow(header)
-    for item_id, item in sorted(item_dict.items(), key=sort_by_manufacturer):
-        row = [
-            item_id,
-            item['manufacturer'],
-            item['item_type'],
-            item['price'],
-            item['service_date'].strftime('%m/%d/%Y'),
-            'damaged' if item['damaged'] else ''
-        ]
-        writer.writerow(row)
+def find_best_item(manufacturer, item_type):
+    items = [item for item in item_dict.values() if item.manufacturer.lower() == manufacturer.lower() and item.item_type.lower() == item_type.lower()]
+    valid_items = [item for item in items if not item.damaged and item.service_date > datetime.now()]
+    return max(valid_items, key=lambda item: item.price, default=None)
 
-# Item type inventory list
-item_types = set(item['item_type'] for item in item_dict.values())
-for item_type in item_types:
-    file_name = f'{item_type}Inventory.csv'
-    with open(file_name, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.writer(f)
-        header = ['item_id', 'manufacturer', 'price', 'service_date', 'damaged']
-        writer.writerow(header)
-        for item_id, item in sorted(item_dict.items(), key=sort_by_item_id):
-            if item['item_type'] == item_type:
-                row = [
-                    item_id,
-                    item['manufacturer'],
-                    item['price'],
-                    item['service_date'].strftime('%m/%d/%Y'),
-                    'damaged' if item['damaged'] else ''
-                ]
-                writer.writerow(row)
+def find_alternative_item(item):
+    alternative_items = [i for i in item_dict.values() if i.item_type.lower() == item.item_type.lower() and i.manufacturer.lower() != item.manufacturer.lower() and not i.damaged and i.service_date > datetime.now()]
+    return min(alternative_items, key=lambda i: abs(i.price - item.price), default=None)
 
-# PastServiceDateInventory.csv
-today = datetime.now()
-with open('PastServiceDateInventory.csv', 'w', newline='', encoding='utf-8') as f:
-    writer = csv.writer(f)
-    header = ['item_id', 'manufacturer', 'item_type', 'price', 'service_date', 'damaged']
-    writer.writerow(header)
-    for item_id, item in sorted(item_dict.items(), key=sort_by_service_date):
-        if item['service_date'] < today:
-            row = [item_id, item['manufacturer'],
-                   item['item_type'],
-                   item['price'],
-                   item['service_date'].strftime('%m/%d/%Y'),
-                   'damaged' if item['damaged'] else ''
-                   ]
-            writer.writerow(row)
+while True:
+    query = input("Enter the manufacturer and item type or 'q' to quit: ")
+    if query.lower() == 'q':
+        break
 
-# DamagedInventory.csv
-with open('DamagedInventory.csv', 'w', newline='', encoding='utf-8') as f:
-    writer = csv.writer(f)
-    header = ['item_id', 'manufacturer', 'item_type', 'price', 'service_date']
-    writer.writerow(header)
-    for item_id, item in sorted(item_dict.items(), key=sort_by_price_desc):
-        if item['damaged']:
-            row = [item_id, item['manufacturer'],
-                   item['item_type'],
-                   item['price'],
-                   item['service_date'].strftime('%m/%d/%Y')
-                   ]
-            writer.writerow(row)
+    manufacturer, item_type, *_ = query.split()
+    best_item = find_best_item(manufacturer, item_type)
+    if best_item is None:
+        print("No such item in inventory")
+    else:
+        print(f"Your item is: {best_item.item_id}, {best_item.manufacturer}, {best_item.item_type}, ${best_item.price}")
+        alternative_item = find_alternative_item(best_item)
+        if alternative_item is not None:
+            print(f"You may, also, consider: {alternative_item.item_id}, {alternative_item.manufacturer}, {alternative_item.item_type}, ${alternative_item.price}")
+
