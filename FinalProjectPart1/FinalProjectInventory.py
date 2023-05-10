@@ -4,6 +4,7 @@
 import csv
 from datetime import datetime
 
+
 class InventoryItem:
     def __init__(self, item_id, manufacturer, item_type, price, service_date, damaged):
         self.item_id = item_id
@@ -24,9 +25,11 @@ class InventoryItem:
     def update_service_date(self, service_date):
         self.service_date = datetime.strptime(service_date, '%m/%d/%Y')
 
+
 def read_csv(file_name):
     with open(file_name, newline='', encoding='utf-8') as f:
         return list(csv.reader(f))
+
 
 manufacturer_list = read_csv('ManufacturerList.csv')
 price_list = read_csv('PriceList.csv')
@@ -44,14 +47,15 @@ for row in service_dates_list:
     if item_id in item_dict:
         item_dict[item_id].update_service_date(service_date)
 
-def find_best_item(manufacturer, item_type, include_damaged=False):
-    items = [item for item in item_dict.values() if item.manufacturer.lower() == manufacturer.lower() and item.item_type.lower() == item_type.lower()]
-    
+
+def find_best_item(manufacturer, item_type, include_damaged):
+    items = [item for item in item_dict.values() if
+             item.manufacturer.lower() == manufacturer.lower() and item.item_type.lower() == item_type.lower()]
     if include_damaged:
-        valid_items = [item for item in items if item.service_date > datetime.now()]
+        valid_items = [item for item in items if item.damaged and item.service_date > datetime.now()]
     else:
         valid_items = [item for item in items if not item.damaged and item.service_date > datetime.now()]
-    
+
     max_price = -1
     best_item = None
     for item in valid_items:
@@ -62,8 +66,9 @@ def find_best_item(manufacturer, item_type, include_damaged=False):
 
 
 def find_alternative_item(item):
-    alternative_items = [i for i in item_dict.values() if i.item_type.lower() == item.item_type.lower() and i.manufacturer.lower() != item.manufacturer.lower() and not i.damaged and i.service_date > datetime.now()]
-    
+    alternative_items = [i for i in item_dict.values() if
+                         i.item_type.lower() == item.item_type.lower() and i.manufacturer.lower() != item.manufacturer.lower() and not i.damaged and i.service_date > datetime.now()]
+
     min_price_diff = float('inf')
     alternative_item = None
     for i in alternative_items:
@@ -75,24 +80,30 @@ def find_alternative_item(item):
 
 
 while True:
-    query = input("Enter the manufacturer and item type or 'q' to quit: ")
-    if query.lower() == 'q':
-        break
+    manufacturer = "q"
+    item_type = ""
+    include_damaged = False
+    damaged_input = ""
+    try:
+        manufacturer, item_type = input("Enter the manufacturer & item type with ; as the delimeter. Enter 'q' or 'exit' to quit: ").split(";")
+        damaged_input = input("Should damaged items be included (Y/N): ")
+    except ValueError:
+        if manufacturer.lower() == 'q' or manufacturer.lower() == 'exit':
+            print("Exiting the system")
+            break
+        else:
+            print("Invalid Command Entered. Please enter MANUFACTURER;ITEM TYPE to search.")
+            continue
 
-    manufacturer, item_type, *_ = query.split()
-    best_item = find_best_item(manufacturer, item_type)
+    if damaged_input.lower() == "y":
+        include_damaged = True
+
+    print("You entered Manufacturer: " + manufacturer + " and item type: " + item_type + ". " + "Include Damaged is: " + str(include_damaged))
+    best_item = find_best_item(manufacturer, item_type, include_damaged)
     if best_item is None:
         print("No such item in inventory")
     else:
-        print(f"Your item is: {best_item.item_id}, {best_item.manufacturer}, {best_item.item_type}, ${best_item.price}")
+        print(f"Your item is:  {best_item.item_id}, {best_item.manufacturer}, {best_item.item_type}, ${best_item.price}")
         alternative_item = find_alternative_item(best_item)
         if alternative_item is not None:
-            print(f"You may, also, consider: "
-                  f"{alternative_item.item_id}, "
-                  f"{alternative_item.manufacturer}, "
-                  f"{alternative_item.item_type}, "
-                  f"${alternative_item.price}")
-
-
-
-
+            print(f"You may, also, consider: {alternative_item.item_id}, {alternative_item.manufacturer}, {alternative_item.item_type}, ${alternative_item.price}")
