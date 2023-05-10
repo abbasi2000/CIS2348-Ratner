@@ -85,7 +85,7 @@ while True:
     include_damaged = False
     damaged_input = ""
     try:
-        manufacturer, item_type = input("Enter the manufacturer & item type with ; as the delimeter. Enter 'q' or 'exit' to quit: ").split(";")
+        manufacturer, item_type = input("Enter the manufacturer & item type with , as the delimeter. Enter 'q' or 'exit' to quit: ").split(",")
         damaged_input = input("Should damaged items be included (Y/N): ")
     except ValueError:
         if manufacturer.lower() == 'q' or manufacturer.lower() == 'exit':

@@ -63,7 +63,7 @@
       <recent name="C:\Users\emada\PycharmProjects\CIS2348-Ratner\Homework" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.random">
+  <component name="RunManager" selected="Python.FinalProjectInventory">
     <configuration name="FinalProjectInventory" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CIS2348-Ratner" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -176,8 +176,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.random" />
         <item itemvalue="Python.FinalProjectInventory" />
+        <item itemvalue="Python.random" />
         <item itemvalue="Python.Zylabs_10.11" />
         <item itemvalue="Python.Zylabs_10.19" />
         <item itemvalue="Python.Zylabs_10.15" />
