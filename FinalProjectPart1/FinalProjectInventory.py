@@ -50,7 +50,7 @@ for row in service_dates_list:
 
 def find_best_item(manufacturer, item_type, include_damaged):
     items = [item for item in item_dict.values() if
-             item.manufacturer.lower() == manufacturer.lower() and item.item_type.lower() == item_type.lower()]
+             item.manufacturer.strip().lower() == manufacturer.lower() and item.item_type.strip().lower() == item_type.lower()]
     if include_damaged:
         valid_items = [item for item in items if item.damaged and item.service_date > datetime.now()]
     else:
@@ -67,25 +67,25 @@ def find_best_item(manufacturer, item_type, include_damaged):
 
 def find_alternative_item(item):
     alternative_items = [i for i in item_dict.values() if
-                         i.item_type.lower() == item.item_type.lower() and i.manufacturer.lower() != item.manufacturer.lower() and not i.damaged and i.service_date > datetime.now()]
+                         i.item_type.lower() == item.item_type.strip().lower() and i.manufacturer.lower() != item.manufacturer.strip().lower() and not i.damaged and i.service_date > datetime.now()]
 
-    min_price_diff = float('inf')
     alternative_item = None
     for i in alternative_items:
-        price_diff = abs(i.price - item.price)
-        if price_diff < min_price_diff:
-            min_price_diff = price_diff
+        if item.item_type.lower() == i.item_type.lower() and item.manufacturer.lower() != i.manufacturer.lower() and abs(
+                item.price - i.price) / item.price <= 2:
             alternative_item = i
     return alternative_item
 
 
 while True:
-    manufacturer = "q"
+    manufacturer = ""
     item_type = ""
     include_damaged = False
     damaged_input = ""
+
     try:
-        manufacturer, item_type = input("Enter the manufacturer & item type with , as the splitting character (delimiter) between the two values. Enter 'q' to quit: ").split(",")
+        manufacturer, item_type = input(
+            "Enter the manufacturer & item type with , as the delimeter (splitting character) between the two values. Enter 'q' to quit: ").split(",")
         damaged_input = input("Should damaged items be included (Y/N): ")
     except ValueError:
         if manufacturer.lower() == 'q':
@@ -95,15 +95,19 @@ while True:
             print("Invalid Command Entered. Please enter MANUFACTURER;ITEM TYPE to search.")
             continue
 
+    manufacturer = manufacturer.strip()
+    item_type = item_type.strip()
+
     if damaged_input.lower() == "y":
         include_damaged = True
 
-    print("You entered Manufacturer: " + manufacturer + " and item type: " + item_type + ". " + "Include Damaged is: " + str(include_damaged))
     best_item = find_best_item(manufacturer, item_type, include_damaged)
     if best_item is None:
         print("No such item in inventory")
     else:
-        print(f"Your item is:  {best_item.item_id}, {best_item.manufacturer}, {best_item.item_type}, ${best_item.price}")
+        print(
+            f"Your item is:  {best_item.item_id}, {best_item.manufacturer}, {best_item.item_type}, ${best_item.price}")
         alternative_item = find_alternative_item(best_item)
         if alternative_item is not None:
-            print(f"You may, also, consider: {alternative_item.item_id}, {alternative_item.manufacturer}, {alternative_item.item_type}, ${alternative_item.price}")
+            print(
+                f"You may, also, consider: {alternative_item.item_id}, {alternative_item.manufacturer}, {alternative_item.item_type}, ${alternative_item.price}")
